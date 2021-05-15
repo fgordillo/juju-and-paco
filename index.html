@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juju & Paco's wedding</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="#home">Juju & Paco</a>
+        <a href="#rsvp">RSVP</a>
+        <a href="#gifts">Gifts</a>
+        <a href="#kaunas">Kaunas</a>
+        <a href="#venue">Wedding day</a>
+    </nav>
+
+    <section id="home">
+        <img
+            src="assets/engagement.jpg"
+            alt="Picture of the engagement ring"
+        >
+        <h1>Our story</h1>
+        <p><small>For those who still don't know...</small></p>
+        <p>We met for the first time almost 6 years ago in Prague.</p>
+        <p>Then we met again and again in different places but only 1 year later, August 27th 2016, the spark of love happened in Northern Macedonia.</p>
+        <p>Since then we started a distant relationship, Juju living in Kaunas, Paco living in Madrid.</p>
+        <p>It was hard at the beginning but every time we could meet made it worth it.</p>
+        <p>After almost 3 years of visiting each other Paco moved to Lithuania so they could live together. On the wedding day it will be exactly 5 years being together.</p>
+    </section>
+
+    <section id="rsvp">
+        <h1>RSVP</h1>
+        <p>Fill out <a href="#TODO">this form</a> in order to let us know if you are joining us on our special day.</p>
+    </section>
+
+    <section id="gifts">
+        <h1>Gifts</h1>
+        <p>The best gift is your presence in the event. After so much time not seeing each other, we'd love to have you with us in Kaunas on this special day.</p>
+        <p>Since we are not sure where we'll be living in the future, we'd appreciate more gifts in cash than furniture or house appliances that we would need to move from house to house.</p>
+    </section>
+
+    <section id="kaunas">
+        <h1>How to get to Kaunas and where to stay</h1>
+        <img
+            src="assets/lithuanian.jpg"
+            alt="Picture of us in the Lithuanian Embassy in Madrid"
+        >
+        <h2>Travelling to Kaunas</h2>
+        <p>Depending where you are coming from, you may find several alternatives. We'd recommend you taking a flight to Kaunas Airport. Vilnius Airport is also well connected by train to Kaunas.</p>
+        <p>TODO: Create some sort of survival guide on how to get to Kaunas city from the different airports</p>
+        <h2>Where to stay in Kaunas</h2>
+        <p>Keep in mind that the wedding night we will all sleep at the venue, which is around 45 min away from Kaunas</p>
+        <p>For the rest of the days, in case you want to spend some days in the city and/or explore the country, here are some places we can recommend depending on your budget:</p>
+        <ul>
+            <li>Hotel 1 - 90€ / night</li>
+            <li>Hotel 2 - 80€ / night</li>
+            <li>AirBnB in the Old Town - 30-40€ / night</li>
+            <li>AirBnB in the outskirts of the city - 15-20€ / night</li>
+            <li>Hostel - 15€ / night</li>
+        </ul>
+    </section>
+
+    <section id="venue">
+        <h1>Wedding day</h1>
+        <p>The wedding is planned for Friday 27th August 2021</p>
+        <p>
+            The ceremony will be held at
+            <a
+                href="https://www.google.es/maps/place/Rotu%C5%A1%C4%97s+aik%C5%A1t%C4%97/@54.8967432,23.884456,17z/data=!3m1!4b1!4m5!3m4!1s0x46e723576a8e2c9f:0xa86456a78eb0edf1!8m2!3d54.8967432!4d23.8866447"
+                target="_blank"
+            >
+            Kaunas City Hall
+            </a>
+            at 13:00 EEST (time subject to change).
+        </p>
+        <img
+            src="assets/city-hall.jpg"
+            alt="Kaunas City Hall"
+        >
+        <p>After the civil ceremony, we'll hang out in the square near the City Hall and then we'll go by a private bus all together (but the newly weds) to the venue.</p>
+        <p>Let us know in case you'll go to the venue by car so we can adjust the places of the bus.</p>
+    </section>
+</body>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+</html>
