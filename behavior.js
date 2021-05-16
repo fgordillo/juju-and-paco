@@ -34,7 +34,12 @@ function setDocumentLang() {
     const supportedLocale = preferredLocales.find(function(locale) {
         return ["en", "es", "lt"].includes(locale)
     })
-    document.querySelector("html").setAttribute("lang", supportedLocale)
+    // English will be the default language in case we don't support any of the preferred languages
+    let lang = "en"
+    if (supportedLocale) {
+        lang = supportedLocale
+    }
+    document.querySelector("html").setAttribute("lang", lang)
 }
 
 setDocumentLang()

@@ -1,42 +1,99 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juju & Paco's wedding</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oregano&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css">
 </head>
 <body>
     <nav id="nav">
-        <a href="#home">Juju & Paco</a>
-        <a href="#rsvp">RSVP</a>
-        <a href="#gifts">Gifts</a>
+        <a
+            href="#home"
+            class="fancy"
+        >
+            <span lang="en">Juju & Paco</span>
+            <span lang="es">Juju y Paco</span>
+            <span lang="lt">Juju ir Paco</span>
+        </a>
+        <a href="#rsvp">
+            <span lang="en">RSPV</span>
+            <span lang="es">Confirma tu asistencia</span>
+            <span lang="lt">Registracija</span>
+        </a>
+        <a href="#gifts">
+            <span lang="en">Gifts</span>
+            <span lang="es">Regalos</span>
+            <span lang="lt">Dovanos</span>
+        </a>
         <a href="#kaunas">Kaunas</a>
-        <a href="#venue">Wedding day</a>
+        <a href="#venue">
+            <span lang="en">Wedding day</span>
+            <span lang="es">Día de la boda</span>
+            <span lang="lt">Vestuvių diena</span>
+        </a>
     </nav>
 
     <section id="home">
-        <img
-            src="assets/engagement.jpg"
-            alt="Picture of the engagement ring"
+        <div
+            class="carousel js-flickity"
+            data-flickity-options='{ "cellAlign": "left", "contain": true }'
         >
+            <div class="carousel-cell"><img src="assets/asturias.jpeg" alt="Trip to Asturias in summer 2019"></div>
+            <div class="carousel-cell"><img src="assets/barcelona.jpeg" alt=""></div>
+            <div class="carousel-cell"><img src="assets/cologne.jpeg" alt="Unexpected trip to Cologne in March 2020"></div>
+            <div class="carousel-cell"><img src="assets/isparta.jpeg" alt=""></div>
+            <div class="carousel-cell"><img src="assets/kaunas.jpeg" alt="Supporting Belarus from Kaunas"></div>
+            <div class="carousel-cell"><img src="assets/las-palmas.jpeg" alt=""></div>
+            <div class="carousel-cell"><img src="assets/madrid.jpeg" alt=""></div>
+            <div class="carousel-cell"><img src="assets/malta.jpeg" alt=""></div>
+            <div class="carousel-cell"><img src="assets/mazeikiai.jpeg" alt=""></div>
+            <div class="carousel-cell"><img src="assets/rome.jpeg" alt=""></div>
+            <div class="carousel-cell"><img src="assets/serbia.jpeg" alt=""></div>
+            <div class="carousel-cell"><img src="assets/tallinn.jpeg" alt=""></div>
+            <div class="carousel-cell"><img src="assets/thessaloniki.jpeg" alt=""></div>
+            <div class="carousel-cell"><img src="assets/toledo.jpeg" alt=""></div>
+            <div class="carousel-cell"><img src="assets/trakai.jpeg" alt=""></div>
+            <div class="carousel-cell"><img src="assets/trillo.jpeg" alt=""></div>
+            <div class="carousel-cell"><img src="assets/trips.jpeg" alt=""></div>
+            <div class="carousel-cell"><img src="assets/upm.jpeg" alt=""></div>
+            <div class="carousel-cell"><img src="assets/vegeta.jpeg" alt=""></div>
+            <div class="carousel-cell"><img src="assets/vilnius.jpeg" alt=""></div>
+            <div class="carousel-cell">
+                <img
+                    src="assets/engagement.jpg"
+                    alt="Picture of the engagement ring"
+                >
+            </div>
+        </div>
+        
         <article lang="en">
             <h1>Our story</h1>
             <p><small>For those who still don't know...</small></p>
             <p>We met for the first time almost 6 years ago in Prague.</p>
-            <p>Then we met again and again in different places but only 1 year later, August 27th 2016, the spark of love happened in Northern Macedonia.</p>
+            <p>Then we met again and again in different places but only 1 year later, August 27th 2016, the spark of love happened in FYROM, nowadays known as North Macedonia.</p>
             <p>Since then we started a distant relationship, Juju living in Kaunas, Paco living in Madrid.</p>
             <p>It was hard at the beginning but every time we could meet made it worth it.</p>
             <p>After almost 3 years of visiting each other Paco moved to Lithuania so they could live together. On the wedding day it will be exactly 5 years being together.</p>
         </article>
 
         <article lang="es">
-            Esta sería una versión en español.
+            <h1>Nuestra historia de amor</h1>
+            <p><small>Por si todavía no la conoces...</small></p>
+            <p>Nos conocimos en Praga hace ya casi 6 años.</p>
+            <p>A continuación, nos volvimos a ver en varias ocasiones en Finlandia, Turquía, Estonia..., pero solo un año después se encendió la chispa del amor. Fue un 27 de agosto de 2016 en la Antigua República Yugoslava de Macedonia, conocida hoy en día como Macedonia del Norte</p>
+            <p>Desde entonces, comenzamos una relación a distancia: Juju viviendo en Kaunas y Paco en Madrid.</p>
+            <p>Al principio se nos hizo duro, pero cada vez que nos veíamos hacía que mereciese la pena.</p>
+            <p>Después de casi 3 años de visitas esporádicas, Paco decidió mudarse a Lituania para así poder comenzar a vivir juntos. El día de la boda cumplimos 5 años saliendo juntos y 2 viviendo juntos, así que es un día para recordar.</p>
         </article>
 
         <article lang="lt">
             Laba diena su vištiena
+            ĄČĘĖĮŠŲŪŽ ąčęėįšųūž
         </article>
     </section>
 
@@ -95,4 +152,5 @@
 </body>
 
 <script src="behavior.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
 </html>
