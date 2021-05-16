@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
+    <nav id="nav">
         <a href="#home">Juju & Paco</a>
         <a href="#rsvp">RSVP</a>
         <a href="#gifts">Gifts</a>
@@ -21,13 +21,23 @@
             src="assets/engagement.jpg"
             alt="Picture of the engagement ring"
         >
-        <h1>Our story</h1>
-        <p><small>For those who still don't know...</small></p>
-        <p>We met for the first time almost 6 years ago in Prague.</p>
-        <p>Then we met again and again in different places but only 1 year later, August 27th 2016, the spark of love happened in Northern Macedonia.</p>
-        <p>Since then we started a distant relationship, Juju living in Kaunas, Paco living in Madrid.</p>
-        <p>It was hard at the beginning but every time we could meet made it worth it.</p>
-        <p>After almost 3 years of visiting each other Paco moved to Lithuania so they could live together. On the wedding day it will be exactly 5 years being together.</p>
+        <article lang="en">
+            <h1>Our story</h1>
+            <p><small>For those who still don't know...</small></p>
+            <p>We met for the first time almost 6 years ago in Prague.</p>
+            <p>Then we met again and again in different places but only 1 year later, August 27th 2016, the spark of love happened in Northern Macedonia.</p>
+            <p>Since then we started a distant relationship, Juju living in Kaunas, Paco living in Madrid.</p>
+            <p>It was hard at the beginning but every time we could meet made it worth it.</p>
+            <p>After almost 3 years of visiting each other Paco moved to Lithuania so they could live together. On the wedding day it will be exactly 5 years being together.</p>
+        </article>
+
+        <article lang="es">
+            Esta sería una versión en español.
+        </article>
+
+        <article lang="lt">
+            Laba diena su vištiena
+        </article>
     </section>
 
     <section id="rsvp">
@@ -84,15 +94,5 @@
     </section>
 </body>
 
-<script>
-document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-</script>
+<script src="behavior.js"></script>
 </html>

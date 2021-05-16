@@ -4,9 +4,20 @@
   box-sizing: border-box;
 }
 
+*:lang(en) :not(:lang(en)) {
+    display: none;
+}
+*:lang(es) :not(:lang(es)) {
+    display: none;
+}
+*:lang(lt) :not(:lang(lt)) {
+    display: none;
+}
+
 :root {
     --text-color: hsl(115deg 42% 80%);
-    --bg-color: hsl(115deg 52% 23%);
+    --bg-color: hsl(115deg 52% 13%);
+    --bg-content: hsl(115deg 52% 23%);
 }
 
 body {
@@ -39,7 +50,7 @@ nav {
     top: 0;
     width: 100%;
     margin: 0 auto;
-    background-color: var(--bg-color);
+    background-color: var(--bg-content);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
 }
 nav a:first-child {
@@ -49,10 +60,16 @@ nav a + a {
     margin-left: 20px;
 }
 section {
-    padding: 50px 20px 0;
+    padding: 50px 32px 0;
     margin: 0 auto;
-    max-width: 900px;
+    max-width: 1024px;
     width: 100%;
+    background-color: var(--bg-content);
+}
+
+section h1 {
+    display: flex;
+    align-items: center;
 }
 
 section img {
@@ -83,6 +100,18 @@ section img {
     }
     section p, section h1, section h2 {
         padding: 0 20px;
+    }
+    section h1::after {
+        content: "";
+        background-image: url(assets/angle-double-up.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        float: right;
+        position: relative;
+        margin-left: auto;
+        height: 24px;
+        width: 24px;
+        flex-shrink: 0;
     }
     section img {
         height: 300px;
