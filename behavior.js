@@ -16,17 +16,23 @@ document.querySelectorAll('h1').forEach(function(h1) {
     })
 })
 
+function addIfUnique(array, item) {
+    const idx = array.findIndex(item)
+    if (idx !== -1) return
+    array.push(item)
+}
+
 function getBrowserPreferredLocales(languages=[window.navigator.language, ...Array.from(window.navigator.languages || [])]) {
     const locales = {}
 
     for (let lang of languages) {
-        if (/^\w{2}$/.test(lang)) locales[lang] = null
+        if (/^\w{2}$/.test(lang)) addIfUnique(locales, lang)
 
         let result = /^(\w{2})-\w{2}$/.exec(lang)
-        if (result) locales[result[1]] = null
+        if (result) addIfUnique(locales, result[1])
     }
 
-    return Object.keys(locales)
+    return locales
 }
 
 function setDocumentLang() {
