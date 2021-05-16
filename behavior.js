@@ -5,12 +5,20 @@ document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
         })
+    })
+})
+
+document.querySelectorAll('a[data-lang]').forEach(function(anchor) {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault()
+        const lang = this.getAttribute('data-lang')
+        document.querySelector('html').setAttribute('lang', lang)
     });
 })
 
 document.querySelectorAll('h1').forEach(function(h1) {
     h1.addEventListener('click', function (e) {
-        document.querySelector("#nav").scrollIntoView({
+        document.querySelector('#nav').scrollIntoView({
             behavior: 'smooth'
         })
     })
@@ -40,14 +48,14 @@ function getBrowserPreferredLocales(languages=[window.navigator.language, ...Arr
 function setDocumentLang() {
     const preferredLocales = getBrowserPreferredLocales()
     const supportedLocale = preferredLocales.find(function(locale) {
-        return ["en", "es", "lt"].includes(locale)
+        return ['en', 'es', 'lt'].includes(locale)
     })
     // English will be the default language in case we don't support any of the preferred languages
-    let lang = "en"
+    let lang = 'en'
     if (supportedLocale) {
         lang = supportedLocale
     }
-    document.querySelector("html").setAttribute("lang", lang)
+    document.querySelector('html').setAttribute('lang', lang)
 }
 
 setDocumentLang()

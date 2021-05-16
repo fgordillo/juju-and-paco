@@ -4,13 +4,13 @@
   box-sizing: border-box;
 }
 
-*:lang(en) :not(:lang(en)) {
+*:lang(en) :not(:lang(en)), *:lang(en) [data-lang='en'] {
     display: none;
 }
-*:lang(es) :not(:lang(es)) {
+*:lang(es) :not(:lang(es)), *:lang(es) [data-lang='es'] {
     display: none;
 }
-*:lang(lt) :not(:lang(lt)) {
+*:lang(lt) :not(:lang(lt)), *:lang(lt) [data-lang='lt'] {
     display: none;
 }
 
@@ -42,6 +42,7 @@ a {
     color: var(--text-color);
     text-decoration: none;
     font-weight: bolder;
+    cursor: pointer;
 }
 a:hover, a:focus {
     text-decoration: underline;
