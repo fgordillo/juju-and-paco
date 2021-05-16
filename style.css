@@ -101,13 +101,14 @@ section img {
     height: 400px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     nav {
         position: relative;
         flex-direction: column;
         box-shadow: none;
         text-align: center;
         padding: 20px 20px 0;
+        background-color: var(--bg-content);
     }
     nav a:first-child {
         margin-right: 0;
@@ -145,8 +146,8 @@ section img {
 }
 
 .carousel-cell {
-    width: 70%;
-    height: 200px;
+    width: 90%;
+    height: 300px;
     /* flex-box, center image in cell */
     display: -webkit-box;
     display: -webkit-flex;

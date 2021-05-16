@@ -28,17 +28,17 @@
      inkscape:pageshadow="2"
      inkscape:zoom="4.1631373"
      inkscape:cx="54.591084"
-     inkscape:cy="65.099004"
+     inkscape:cy="74.707143"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
      showgrid="false"
      units="px"
-     inkscape:window-width="1252"
-     inkscape:window-height="943"
-     inkscape:window-x="356"
+     inkscape:window-width="1280"
+     inkscape:window-height="755"
+     inkscape:window-x="1920"
      inkscape:window-y="23"
-     inkscape:window-maximized="0" />
+     inkscape:window-maximized="1" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -47,7 +47,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -57,7 +57,7 @@
      id="layer1">
     <g
        id="g951"
-       transform="translate(1.2030461,-0.08340523)">
+       transform="rotate(1.9304369,25.385261,39.979807)">
       <path
          id="rect835"
          style="fill:#c1272d;fill-opacity:1;stroke-width:2.04881;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.755905"
