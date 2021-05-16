@@ -17,13 +17,15 @@ document.querySelectorAll('h1').forEach(function(h1) {
 })
 
 function addIfUnique(array, item) {
-    const idx = array.findIndex(item)
+    const idx = array.findIndex(function(el) {
+        return el === item
+    })
     if (idx !== -1) return
     array.push(item)
 }
 
 function getBrowserPreferredLocales(languages=[window.navigator.language, ...Array.from(window.navigator.languages || [])]) {
-    const locales = {}
+    const locales = []
 
     for (let lang of languages) {
         if (/^\w{2}$/.test(lang)) addIfUnique(locales, lang)
