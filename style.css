@@ -90,6 +90,8 @@ h2 {
 }
 .fancy {
     font-size: 2rem;
+    display: flex;
+    align-items: center;
 }
 
 section img {
