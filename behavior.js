@@ -24,6 +24,16 @@ document.querySelectorAll('h1').forEach(function(h1) {
     })
 })
 
+let installApp = null
+
+window.addEventListener("beforeinstallprompt", function(event) {
+    event.preventDefault()
+    installApp = event.prompt
+    const link = document.getElementsByClassName("fancy")[0]
+    link.addEventListener("click", installApp)
+    link.setAttribute("title", "Install app")
+})
+
 function addIfUnique(array, item) {
     const idx = array.findIndex(function(el) {
         return el === item
