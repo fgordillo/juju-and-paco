@@ -58,4 +58,16 @@ function setDocumentLang() {
     document.querySelector('html').setAttribute('lang', lang)
 }
 
+function registerSW() {
+    if (!('serviceWorker' in navigator)) {
+        console.log('Service Worker not supported')
+        return
+    }
+    navigator.serviceWorker.register('/service-worker.js')
+    .then(function(registration) {
+        console.log('SW registered! Scope is:', registration.scope);
+    })
+}
+
 setDocumentLang()
+registerSW()
