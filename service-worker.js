@@ -3,15 +3,15 @@ self.addEventListener("install", function(event) {
         caches.open("assets").then(function(cache) {
             return cache.addAll(
                 [
-                    "/assets/PoiretOne-Regular.ttf",
-                    "/assets/angle-double-up.svg",
-                    "/assets/lithuanian.jpg",
-                    "/assets/city-hall.jpg",
-                    "/assets/logo.png",
-                    "/assets/logo.svg",
-                    "/behavior.js",
-                    "/style.css",
-                    "/index.html"
+                    "./assets/PoiretOne-Regular.ttf",
+                    "./assets/angle-double-up.svg",
+                    "./assets/lithuanian.jpg",
+                    "./assets/city-hall.jpg",
+                    "./assets/logo.png",
+                    "./assets/logo.svg",
+                    "./behavior.js",
+                    "./style.css",
+                    "./index.html"
                 ]
             )
         })
