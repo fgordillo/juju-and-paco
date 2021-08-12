@@ -36,16 +36,11 @@ window.addEventListener("beforeinstallprompt", function(event) {
 function showInstallPrompt() {
     const prompt = document.getElementById("install")
     prompt.setAttribute("style", "display:block;")
-    prompt.addEventListener("click", function() {
-        hideInstallPrompt()
-        installApp && installApp.prompt()
-    })
-    const closeButton = document.getElementById("close")
-    closeButton.addEventListener("click", function(event) {
-        event.preventDefault()
-        event.stopPropagation()
-        hideInstallPrompt()
-    })
+}
+
+function installPrompt() {
+    hideInstallPrompt()
+    installApp && installApp.prompt()
 }
 
 function hideInstallPrompt() {

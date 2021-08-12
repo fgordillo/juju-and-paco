@@ -50,16 +50,27 @@
         </a>
         <div
             id="install"
-            role="button"
             style="display: none;"
             class="install-prompt"
         >
-            Install this web as a app in your device
+            <p lang="en">Install this web as a app in your device</p>
+            <p lang="es">¿Quieres instalar esta web como si fuese una app en tu móvil?</p>
+            <p lang="lt">Įdiekite šį žiniatinklį kaip programą savo prietaise</p>
             <button
-                id="close"
+                class="button accept"
+                onclick="installPrompt()"
+            >
+                <span lang="en">Install</span>
+                <span lang="es">Instalar</span>
+                <span lang="lt">Instaliuoti</span>
+            </button>
+            <button
+                class="button cancel"
                 onclick="hideInstallPrompt()"
             >
-                I'd rather not
+                <span lang="en">I'd rather not</span>
+                <span lang="es">Mejor no</span>
+                <span lang="lt">Ne dabar</span>
             </button>
         </div>
     </nav>

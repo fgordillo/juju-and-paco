@@ -9,9 +9,6 @@ self.addEventListener("install", function(event) {
                     "./assets/city-hall.jpg",
                     "./assets/logo.png",
                     "./assets/logo.svg",
-                    "./behavior.js",
-                    "./style.css",
-                    "./index.html"
                 ]
             )
         })
@@ -21,11 +18,13 @@ self.addEventListener("install", function(event) {
 self.addEventListener("fetch", function(event) {
     event.respondWith(
         caches.open("assets").then(function(cache) {
+            // stale-while-revalidate
             return cache.match(event.request).then(function (response) {
-                return response || fetch(event.request).then(function(response) {
-                    cache.put(event.request, response.clone())
-                    return response
+                const fetchPromise = fetch(event.request).then(function(networkResponse) {
+                    cache.put(event.request, networkResponse.clone())
+                    return networkResponse
                 })
+                return response || fetchPromise
             })
         })
     )

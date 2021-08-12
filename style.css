@@ -105,6 +105,19 @@ section img {
 .install-prompt {
     display: none;
 }
+.button {
+    padding: 5px 10px;
+}
+.accept {
+    color: var(--bg-menu);
+    background-color: white;
+    border: 1px solid var(--bg-menu);
+}
+.cancel {
+    color: red;
+    background-color: white;
+    border: 1px solid red;
+}
 
 @media only screen and (max-width: 768px) {
     nav {
