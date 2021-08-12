@@ -28,9 +28,11 @@ let installApp = null
 
 window.addEventListener("beforeinstallprompt", function(event) {
     event.preventDefault()
-    installApp = event.prompt
+    installApp = event
     const link = document.getElementsByClassName("fancy")[0]
-    link.addEventListener("click", installApp)
+    link.addEventListener("click", function() {
+        installApp.prompt()
+    })
     link.setAttribute("title", "Install app")
 })
 
