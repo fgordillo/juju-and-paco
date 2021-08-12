@@ -1,0 +1,15 @@
+{
+    "short_name": "Wedding",
+    "name": "Juju & Paco's wedding",
+    "theme_color": "#21591c",
+    "background_color": "#21591c",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "assets/logo.png",
+            "type": "image/png",
+            "sizes": "48x48"
+        }
+    ],
+    "start_url": "/?utm_source=launcher"
+}
