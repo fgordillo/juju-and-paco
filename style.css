@@ -102,6 +102,10 @@ section img {
     height: 400px;
 }
 
+.install-prompt {
+    display: none;
+}
+
 @media only screen and (max-width: 768px) {
     nav {
         position: relative;
@@ -139,6 +143,9 @@ section img {
     }
     section img {
         height: 300px;
+    }
+    .install-prompt {
+        display: block;
     }
 }
 

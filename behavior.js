@@ -30,11 +30,28 @@ window.addEventListener("beforeinstallprompt", function(event) {
     event.preventDefault()
     installApp = event
     const link = document.getElementsByClassName("fancy")[0]
-    link.addEventListener("click", function() {
-        installApp.prompt()
-    })
-    link.setAttribute("title", "Install app")
+    showInstallPrompt()
 })
+
+function showInstallPrompt() {
+    const prompt = document.getElementById("install")
+    prompt.setAttribute("style", "display:block;")
+    prompt.addEventListener("click", function() {
+        hideInstallPrompt()
+        installApp && installApp.prompt()
+    })
+    const closeButton = document.getElementById("close")
+    closeButton.addEventListener("click", function(event) {
+        event.preventDefault()
+        event.stopPropagation()
+        hideInstallPrompt()
+    })
+}
+
+function hideInstallPrompt() {
+    const prompt = document.getElementById("install")
+    prompt.setAttribute("style", "display:none;")
+}
 
 function addIfUnique(array, item) {
     const idx = array.findIndex(function(el) {
