@@ -29,8 +29,9 @@ let installApp = null
 window.addEventListener("beforeinstallprompt", function(event) {
     event.preventDefault()
     installApp = event
-    const link = document.getElementsByClassName("fancy")[0]
-    showInstallPrompt()
+    if (window.screen.width < 769) {
+        showInstallPrompt()
+    }
 })
 
 function showInstallPrompt() {
