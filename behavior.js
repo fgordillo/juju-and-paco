@@ -24,31 +24,6 @@ document.querySelectorAll('h1').forEach(function(h1) {
     })
 })
 
-let installApp = null
-
-window.addEventListener("beforeinstallprompt", function(event) {
-    event.preventDefault()
-    installApp = event
-    if (window.screen.width < 769) {
-        showInstallPrompt()
-    }
-})
-
-function showInstallPrompt() {
-    const prompt = document.getElementById("install")
-    prompt.setAttribute("style", "display:block;")
-}
-
-function installPrompt() {
-    hideInstallPrompt()
-    installApp && installApp.prompt()
-}
-
-function hideInstallPrompt() {
-    const prompt = document.getElementById("install")
-    prompt.setAttribute("style", "display:none;")
-}
-
 function addIfUnique(array, item) {
     const idx = array.findIndex(function(el) {
         return el === item
